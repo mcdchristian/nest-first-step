@@ -16,7 +16,7 @@ import {
   // UseInterceptors,
 } from '@nestjs/common';
 import type { Request, Response } from 'express';
-import { Todo } from './entties/todo.entity';
+import { Todo } from './entities/todo.entity';
 import { AddTodoDto } from './dto/add-todo.dto';
 import { TodoService } from './todo.service';
 import { UpperAndFusionPipe } from '../pipes/upper-and-fusion/upper-and-fusion.pipe';
