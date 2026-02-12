@@ -9,7 +9,7 @@ export class TodoService {
     // console.log(params);
     return this.todos;
   }
-  AddTodo(newTodo: AddTodoDto): Todo {
+  addTodo(newTodo: AddTodoDto): Todo {
     // const todo = new Todo();
     const { name, description } = newTodo;
     let id: number;

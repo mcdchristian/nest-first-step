@@ -16,7 +16,7 @@ import {
   // UseInterceptors,
 } from '@nestjs/common';
 import type { Request, Response } from 'express';
-import { Todo } from './entities/todo.entity';
+import type { Todo } from './entities/todo.entity';
 import { AddTodoDto } from './dto/add-todo.dto';
 import { TodoService } from './todo.service';
 import { UpperAndFusionPipe } from '../pipes/upper-and-fusion/upper-and-fusion.pipe';
@@ -67,10 +67,10 @@ export class TodoController {
   @Post()
   addTodo(
     // @Body() newTodo,
-    @Body() newTodo: /*Todo*/ AddTodoDto,
+    @Body() newTodo: AddTodoDto,
   ): Todo {
     // console.log(newTodo);
-    return this.todoService.AddTodo(newTodo);
+    return this.todoService.addTodo(newTodo);
   }
 
   @Delete(':id')
